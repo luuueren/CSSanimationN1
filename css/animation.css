@@ -67,16 +67,18 @@ image::after {
     transform: translate(-50%, -50%);
 }
 
-.animation .arrow span {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    border-top: 5px solid #06a8ff;
-    border-right: 5px solid #06a8ff;
-    transform: rotate(45deg);
-    margin: -8px;
-    animation: arr 2s infinite;
-    -webkit-animation: arr 2s infinite;
+@media (min-width:821px) {
+    .animation .arrow span {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-top: 5px solid #06a8ff;
+        border-right: 5px solid #06a8ff;
+        transform: rotate(45deg);
+        margin: -8px;
+        animation: arr 2s infinite;
+        -webkit-animation: arr 2s infinite;
+    }
 }
 
 .animation .arrow span:nth-child(2) {
@@ -95,7 +97,6 @@ image::after {
 
     50% {
         opacity: 1;
-
     }
 
     100% {
@@ -150,5 +151,35 @@ image::after {
 
     to {
         --angle: 360deg;
+    }
+}
+
+@media (max-width:820px) {
+    .animation {
+        flex-direction: column;
+    }
+
+    .animation .arrow {
+        top: 35%;
+    }
+
+    .animation .arrow span {
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-bottom: 5px solid #06a8ff;
+        border-right: 5px solid #06a8ff;
+        transform: rotate(45deg);
+        margin: -8px;
+        animation: arr 2s infinite;
+        -webkit-animation: arr 2s infinite;
+    }
+
+    .animation .card {
+        margin: 28px auto;
+    }
+
+    .animation .image {
+        margin: 100px auto;
     }
 }
